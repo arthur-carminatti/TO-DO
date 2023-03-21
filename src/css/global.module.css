@@ -1,0 +1,9 @@
+:root {
+    --gray-700: #454545;
+    --gray-900: #0D0D0D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}

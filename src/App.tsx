@@ -1,9 +1,21 @@
-import './App.css'
+import './css/global.module.css';
+import styles from './css/app.module.css';
+
+import igniteLogo from './assets/ignite-logo.svg';
 
 function App() {
 
   return (
-    <h1>Hello World</h1>
+    <div>
+      <header className={styles.header}>
+        <img src={igniteLogo} alt="Logotipo" />
+      </header>
+
+      <body className={styles.body}>
+        <h1></h1>
+      </body>
+    </div>
+
   )
 }
 
