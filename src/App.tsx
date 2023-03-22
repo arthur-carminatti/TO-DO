@@ -9,13 +9,16 @@ function App() {
     <div>
       <header className={styles.header}>
         <img src={igniteLogo} alt="Logotipo" />
+        <input className={styles.input} type="text" />
       </header>
 
       <body className={styles.body}>
-        <h1></h1>
       </body>
-    </div>
 
+      <div>
+
+      </div>
+    </div>
   )
 }
 
