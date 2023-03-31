@@ -1,18 +1,21 @@
-import './css/global.module.css';
-import styles from './css/app.module.css';
+import './css/Global.module.css';
 
-import igniteLogo from './assets/ignite-logo.svg';
+import styles from './css/App.module.css'
+
+import { Header } from './components/Header';
+import { Task } from './components/Task';
 
 function App() {
 
   return (
     <div>
-      <header className={styles.header}>
-        <img src={igniteLogo} alt="Logotipo" />
-        <input className={styles.input} type="text" />
-      </header>
+
+      <Header />
 
       <body className={styles.body}>
+        
+        <Task />
+
       </body>
 
       <div>
