@@ -3,6 +3,7 @@ import './css/Global.module.css';
 import styles from './css/App.module.css'
 
 import { Header } from './components/Header';
+import { NewTask } from './components/NewTask';
 import { Task } from './components/Task';
 
 function App() {
@@ -13,8 +14,14 @@ function App() {
       <Header />
 
       <body className={styles.body}>
-        
-        <Task />
+        <div>
+          <NewTask />
+        </div> 
+
+        <div>
+          <Task/>
+        </div>
+
 
       </body>
 

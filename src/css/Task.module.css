@@ -1,58 +1,90 @@
-.task {
+.tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    position: absolute;
+    width: 736px;
+    height: 287px;
+    left: calc(50% - 736px/2 + 8px);
+    top: 292px;
+    border: 1px solid red;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 561px;
+
+    width: 736px;
+    height: 19px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    border: 1px solid red;
+}
+
+.created {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0px;
-    gap: 0.5rem;
+    gap: 8px;
 
-    position: absolute;
-    width: 46rem;
-    height: 3.375rem;
-    left: calc(50% - 46rem/2);
-    top: 10.8125rem;
-    border-radius: 8px;
-}
-
-.input {
-    box-sizing: border-box;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 1rem;
-    gap: 0.5rem;
-
-    width: 39.875rem;
-    height: 3.375rem;
-
-    background: var(--gray-500);
-    color: var(--white);
-
-    border: 1px solid var(--gray-500);
-    border-radius: 8px;
+    width: 139px;
+    height: 19px;
 
     flex: none;
     order: 0;
-    flex-grow: 1;
+    flex-grow: 0;
+
+    border: 1px solid red;
 }
 
-.button {
+.done {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
-    padding: 1rem;
-    gap: 0.5rem;
+    padding: 0px;
+    gap: 8px;
 
-    width: 5.625rem;
-    height: 3.25rem;
-
-    background: var(--blue);
-    border-radius: 8px;
-    border: 1px solid var(--gray-500);
-    color: var(--white);
+    width: 111px;
+    height: 19px;
 
     flex: none;
     order: 1;
     flex-grow: 0;
+
+    border: 1px solid red;
+}
+
+.empty {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 24px;
+    gap: 16px;
+
+    width: 736px;
+    height: 244px;
+
+    border-top: 1px solid #333333;
+    border-radius: 8px;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+    border: 1px solid red;
 }
