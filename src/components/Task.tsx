@@ -3,8 +3,13 @@ import igniteNoItensList from '../assets/ignite-no-itens-list.svg';
 import styles from '../css/Task.module.css'
 
 import { TbTrash } from "react-icons/tb";
+import { InterfaceTask } from '../App';
 
-export function Task() {
+interface Props {
+    tasks: InterfaceTask[];
+}
+
+export function Task({ tasks }: Props) {
     return (
         <div className={styles.tasks}>
             <div className={styles.info}>
@@ -31,15 +36,17 @@ export function Task() {
             </div>
 
             <div >
-                <div className={styles.taskCreated}>
-                    <button className={styles.checkContainter}>
-                        <div />
-                    </button>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere corporis nisi similique iusto expedita saepe unde inventore quis odio, possimus perferendis.</p>
-                    <button className={styles.deleteButton}>
-                        <TbTrash size={20} />
-                    </button>
-                </div>
+                {tasks.map((task) => (
+                    <div className={styles.taskCreated}>
+                        <button className={styles.checkContainter}>
+                            <div />
+                        </button>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere corporis nisi similique iusto expedita saepe unde inventore quis odio, possimus perferendis.</p>
+                        <button className={styles.deleteButton}>
+                            <TbTrash size={20} />
+                        </button>
+                    </div>
+                ))}
             </div>
         </div>
     )
