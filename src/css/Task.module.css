@@ -6,8 +6,8 @@
     gap: 24px;
 
     position: absolute;
-    width: 736px;
-    height: 287px;
+    width: 750px;
+    height: 300px;
     left: calc(50% - 736px/2 + 8px);
     top: 292px;
 }
@@ -18,10 +18,8 @@
     justify-content: space-between;
     align-items: flex-end;
     padding: 0px;
-
     width: 736px;
     height: 19px;
-
     flex: none;
     order: 0;
     align-self: stretch;
@@ -47,7 +45,6 @@
 .pTasks {
     width: 106px;
     height: 17px;
-
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -59,6 +56,17 @@
     flex: none;
     order: 0;
     flex-grow: 0;
+    
+    
+}
+
+span {
+    background: var(--gray-500);
+    color: white;
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
 }
 
 .done {
@@ -66,9 +74,7 @@
     flex-direction: row;
     align-items: center;
     padding: 0px;
-    gap: 8px;
-
-    width: 111px;
+    
     height: 19px;
 
     flex: none;
@@ -140,4 +146,35 @@
     flex: none;
     order: 0;
     flex-grow: 0;
+}
+
+.taskCreated {
+    background: var(--gray-500);
+    border: 1px solid var(--gray-400);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    color: var(--white);
+}
+
+.checkContainter {
+    min-width: 1.125rem;
+    height: 1.125rem;
+    background: none;
+    border: none;
+}
+
+.checkContainter div {
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+}
+.deleteButton {
+    background: none;
+    border: none;
+    color: var(--blue);
 }
