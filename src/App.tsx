@@ -1,51 +1,12 @@
-import './css/Global.module.css';
+import { GlobalStyle } from './styles/global'
+import { ThemeProvider } from 'styled-components'
+import { defaultTheme } from './styles/themes/default'
 
-import styles from './css/App.module.css'
-
-import { Header } from './components/Header';
-import { NewTask } from './components/NewTask';
-import { Task } from './components/Task';
-import { useState } from 'react';
-
-export interface InterfaceTask {
-  id: string;
-  title: string;
-  isCompleted: boolean;
-}
-
-function App() {
-  const [tasks, setTasks] = useState<InterfaceTask[]>([
-    {
-      id: 'teste',
-      title: 'teste',
-      isCompleted: true,
-    }
-  ]);
+export function App() {
 
   return (
-    <div>
-
-      <Header />
-
-      <body className={styles.body}>
-        <div>
-          <NewTask />
-        </div>
-
-        <div>
-          <Task 
-            tasks={tasks}
-          />
-        </div>
-
-
-      </body>
-
-      <div>
-
-      </div>
-    </div>
+    <ThemeProvider theme={defaultTheme}>
+      <GlobalStyle />
+    </ThemeProvider>
   )
 }
-
-export default App
