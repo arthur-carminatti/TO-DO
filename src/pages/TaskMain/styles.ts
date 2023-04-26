@@ -83,8 +83,8 @@ export const TaskMainInfoTaskContainer = styled.div`
     align-items: flex-end;
     padding: 0px;
 
-    width: 736px;
-    height: 19px;
+    width: 46rem;
+    height: 1.188rem;
 `
 
 export const TaskMainInfoCreatedContainer = styled.div`
@@ -93,7 +93,7 @@ export const TaskMainInfoCreatedContainer = styled.div`
     align-items: center;
     padding: 0px;
 
-    gap: 8px;
+    gap: 0.5rem;
 
     p {
         color: ${props => props.theme["-blue"]};
@@ -104,16 +104,16 @@ export const TaskMainInfoCreatedContainer = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 2px 8px;
-        gap: 10px;
+        padding: 0.125rem 0.5rem;
+        gap: 0.625rem;
 
-        width: 25px;
-        height: 19px;
+        width: 1.563rem;
+        height: 1.188rem;
 
         border-radius: 50%;
 
-        font-size: 12px;
-        line-height: 15px;
+        font-size: 0.75rem;
+        line-height: 0.938rem;
 
         background: ${props => props.theme["gray-400"]};
         color: ${props => props.theme["-white"]};
@@ -125,10 +125,10 @@ export const TaskMainInfoDoneContainer = styled.div`
     flex-direction: row;
     align-items: center;
     padding: 0px;
-    gap: 8px;
+    gap: 0.5rem;
 
-    width: 111px;
-    height: 19px;
+    width: 6.938rem;
+    height: 1.188rem;
 
     p {
         color: ${props => props.theme["-purple"]};
@@ -139,16 +139,16 @@ export const TaskMainInfoDoneContainer = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 2px 8px;
-        gap: 10px;
+        padding: 0.125rem 0.5rem;
+        gap: 0.625rem;
 
-        width: 25px;
-        height: 19px;
+        width: 1.563rem;
+        height: 1.188rem;
 
         border-radius: 50%;
 
-        font-size: 12px;
-        line-height: 15px;
+        font-size: 0.75rem;
+        line-height: 0.938rem;
 
         background: ${props => props.theme["gray-400"]};
         color: ${props => props.theme["-white"]};
@@ -162,11 +162,11 @@ export const TaskMainEmptyTaskContainer = styled.div`
     justify-content: center;
     align-items: center;
 
-    padding: 64px 24px;
-    gap: 16px;
+    padding: 4rem 1.5rem;
+    gap: 1rem;
 
-    width: 736px;
-    height: 244px;
+    width: 46rem;
+    height: 15.25rem;
 
     border-top: 1px solid ${props => props.theme["gray-400"]};
     border-radius: 8px;
@@ -174,16 +174,16 @@ export const TaskMainEmptyTaskContainer = styled.div`
     align-self: stretch;
 
     img {
-        width: 56px;
-        height: 56px;
+        width: 3.5rem;
+        height: 3.5rem;
     }
 
     p {
-        width: 688px;
-        height: 44px;
+        width: 43rem;
+        height: 2.75rem;
 
         text-align: center;
-        font-size: 16px;
+        font-size: 1rem;
         line-height: 140%;
 
         color: ${props => props.theme["gray-300"]};
@@ -200,25 +200,25 @@ export const TaskMainTableListTaskContainer = styled.div`
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    gap: 12px;
 
-    width: 736px;
-    height: 408px;
+    width: 46rem;
+    height: 25.5rem;
 
     td {
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        padding: 16px;
-        gap: 12px;
+        padding: 1rem;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
 
-        width: 736px;
-        height: 72px;
+        width: 46rem;
+        height: 4.5rem;
 
         background-color: ${props => props.theme["gray-500"]};
         border: ${props => props.theme["gray-400"]};
-        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.07);
+        box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.07);
         border-radius: 8px;
 
         align-self: stretch;
@@ -237,8 +237,8 @@ export const TaskMainTableListTaskContainer = styled.div`
         }
 
         button {
-            width: 24px;
-            height: 24px;
+            width: 1.5rem;
+            height: 1.5rem;
 
             border: none;
             border-radius: 50%;

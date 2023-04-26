@@ -57,6 +57,16 @@ export function TaskMain() {
                                 <p>Sua atividade selecionada</p>
                                 <Trash size={22}/>
                             </td>
+                            <td>
+                                <button>{isCompleted ? <CheckCircle /> : <div />}</button>
+                                <p>Sua atividade selecionada</p>
+                                <Trash size={22}/>
+                            </td>
+                            <td>
+                                <button>{isCompleted ? <CheckCircle /> : <div />}</button>
+                                <p>Sua atividade selecionada</p>
+                                <Trash size={22}/>
+                            </td>
                         </tbody>
                     </table>
                 </TaskMainTableListTaskContainer>
