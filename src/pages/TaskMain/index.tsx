@@ -5,14 +5,16 @@ import {
     TaskMainInfoDoneContainer,
     TaskMainInfoTaskContainer,
     TaskMainInputContainer,
+    TaskMainTableListTaskContainer,
     TaskMainTaskContainer
 } from "./styles";
 
 import igniteLogo from '../../assets/ignite-logo.svg'
 import taskEmptyLogo from '../../assets/ignite-no-itens-list.svg'
 
-import { PlusCircle } from 'phosphor-react';
+import { PlusCircle, CheckCircle, Trash } from 'phosphor-react';
 
+const isCompleted = true
 
 export function TaskMain() {
     return (
@@ -46,6 +48,19 @@ export function TaskMain() {
                         <br /> Crie tarefas e organize seus itens a fazer
                     </p>
                 </TaskMainEmptyTaskContainer>
+
+                <TaskMainTableListTaskContainer>
+                    <table>
+                        <tbody>
+                            <td>
+                                <button>{isCompleted ? <CheckCircle /> : <div />}</button>
+                                <p>Sua atividade selecionada</p>
+                                <Trash size={22}/>
+                            </td>
+                        </tbody>
+                    </table>
+                </TaskMainTableListTaskContainer>
+
             </TaskMainTaskContainer>
         </>
 
