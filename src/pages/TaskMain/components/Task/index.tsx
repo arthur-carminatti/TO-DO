@@ -10,9 +10,9 @@ import {
 import taskEmptyLogo from '../../../../assets/ignite-no-itens-list.svg'
 import { CheckCircle, Trash } from 'phosphor-react';
 
-const isCompleted = true
-
 export function TaskContainer() {
+    const isCompleted = true
+    
     return (
         <TaskMainTaskContainer >
             <TaskMainInfoTaskContainer>
