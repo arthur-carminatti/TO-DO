@@ -1,5 +1,20 @@
 import styled from "styled-components";
 
+export const TaskMainTaskContainer = styled.div`
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 1.5rem;
+
+    position: absolute;
+    width: 46rem;
+    height: 17.938rem;
+    left: calc(50% - 46rem/2);
+    top: 18.188rem;
+`
+
 export const TaskMainInfoTaskContainer = styled.div`
 
     display: flex;
