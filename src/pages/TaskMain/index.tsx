@@ -1,14 +1,13 @@
 import { Header } from "./components/Header";
 import { Input } from "./components/Input";
-import { TaskContainer } from "./components/Tasks";
+import { Props, TaskContainer } from "./components/Tasks";
 
-export function TaskMain() {
+export function TaskMain({ tasks }: Props) {
     return (
         <>
             <Header />
             <Input />
-            <TaskContainer />
+            <TaskContainer tasks={tasks}/>
         </>
-
     )
 }

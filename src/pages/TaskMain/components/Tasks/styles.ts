@@ -50,7 +50,7 @@ export const TaskMainInfoCreatedContainer = styled.div`
         width: 1.563rem;
         height: 1.188rem;
 
-        border-radius: 50%;
+        border-radius: 9999px;;
 
         font-size: 0.75rem;
         line-height: 0.938rem;
@@ -62,13 +62,9 @@ export const TaskMainInfoCreatedContainer = styled.div`
 
 export const TaskMainInfoDoneContainer = styled.div`
     display: flex;
-    flex-direction: row;
     align-items: center;
     padding: 0px;
     gap: 0.5rem;
-
-    width: 6.938rem;
-    height: 1.188rem;
 
     p {
         color: ${props => props.theme["-purple"]};
@@ -82,10 +78,10 @@ export const TaskMainInfoDoneContainer = styled.div`
         padding: 0.125rem 0.5rem;
         gap: 0.625rem;
 
-        width: 1.563rem;
+        width: 3.25rem;
         height: 1.188rem;
 
-        border-radius: 50%;
+        border-radius: 9999px;
 
         font-size: 0.75rem;
         line-height: 0.938rem;

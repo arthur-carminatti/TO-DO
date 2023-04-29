@@ -9,22 +9,35 @@ import {
 import taskEmptyLogo from '../../../../assets/ignite-no-itens-list.svg'
 import { TaskComponent } from "./components/Task/index";
 
-export function TaskContainer() {
+import { TaskProps } from "../../../../App";
+
+export interface Props {
+    tasks: TaskProps[]
+}
+
+export function TaskContainer({ tasks }: Props) {
+    const taskLength = tasks.length
+    const completedTasks = tasks.filter((task) => task.isCompleted).length
+
     return (
         <TaskMainTaskContainer >
             <TaskMainInfoTaskContainer>
                 <TaskMainInfoCreatedContainer>
                     <p>Tarefas criadas</p>
-                    <span>0</span>
+                    <span>{taskLength}</span>
                 </TaskMainInfoCreatedContainer>
 
                 <TaskMainInfoDoneContainer>
                     <p>Concluídas</p>
-                    <span>0</span>
+                    <span>
+                        {completedTasks} de {taskLength}
+                    </span>
                 </TaskMainInfoDoneContainer>
             </TaskMainInfoTaskContainer>
 
-            <TaskComponent />
+            {tasks.map((task) => (
+                <TaskComponent key={task.id} task={task} />
+            ))}
 
             <TaskMainEmptyTaskContainer>
                 <img src={taskEmptyLogo} alt="" />

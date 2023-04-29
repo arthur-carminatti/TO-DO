@@ -1,8 +1,13 @@
+import { TaskProps } from "../../../../../../App";
 import { TaskMainTableListTaskContainer } from "./styles";
 
 import { CheckCircle, Trash } from 'phosphor-react';
 
-export function TaskComponent() {
+interface Props {
+    task: TaskProps
+}
+
+export function TaskComponent({ task }: Props) {
     const isCompleted = true
     return (
         <TaskMainTableListTaskContainer>
@@ -10,17 +15,7 @@ export function TaskComponent() {
                 <tbody>
                     <td>
                         <button>{isCompleted ? <CheckCircle /> : <div />}</button>
-                        <p>Sua atividade selecionada</p>
-                        <Trash size={22} />
-                    </td>
-                    <td>
-                        <button>{isCompleted ? <CheckCircle /> : <div />}</button>
-                        <p>Sua atividade selecionada</p>
-                        <Trash size={22} />
-                    </td>
-                    <td>
-                        <button>{isCompleted ? <CheckCircle /> : <div />}</button>
-                        <p>Sua atividade selecionada</p>
+                        <p>{task.title}</p>
                         <Trash size={22} />
                     </td>
                 </tbody>
