@@ -17,7 +17,6 @@ export const TaskMainTableListTaskContainer = styled.div`
 
         padding: 1rem;
         gap: 0.75rem;
-        margin-bottom: 0.75rem;
 
         width: 46rem;
         height: 4.5rem;
