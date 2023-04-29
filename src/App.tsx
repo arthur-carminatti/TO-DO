@@ -13,18 +13,7 @@ export interface TaskProps {
 }
 
 export function App() {
-  const [tasks, setTasks] = useState<TaskProps[]>([
-    {
-      id: 'teste',
-      title: 'teste',
-      isCompleted: true
-    },
-    {
-      id: 'teste2',
-      title: 'teste2',
-      isCompleted: false
-    }
-  ])
+  const [tasks, setTasks] = useState<TaskProps[]>([])
 
   function addTask(taskTitle: string) {
     setTasks([
@@ -37,11 +26,19 @@ export function App() {
     ])
   }
 
+  function deleteTask(taskId: string) {
+    const newTasks = tasks.filter((task) => task.id !== taskId)
+    setTasks(newTasks)
+  }
+
   return (
     <ThemeProvider theme={defaultTheme}>
       <Header />
       <Input onAddTask={addTask} />
-      <TaskContainer tasks={tasks} />
+      <TaskContainer
+        tasks={tasks}
+        onDelete={deleteTask}
+      />
       <GlobalStyle />
     </ThemeProvider>
   )

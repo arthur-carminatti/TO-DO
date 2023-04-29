@@ -75,7 +75,6 @@ export const TaskMainInfoDoneContainer = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0.125rem 0.5rem;
         gap: 0.625rem;
 
         width: 3.25rem;

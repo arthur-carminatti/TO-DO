@@ -5,10 +5,16 @@ import { CheckCircle, Trash } from 'phosphor-react';
 
 interface Props {
     task: TaskProps
+    onDelete: (taskId: string) => void
 }
 
-export function TaskComponent({ task }: Props) {
+export function TaskComponent({ task, onDelete }: Props) {
     const isCompleted = true
+
+    function deleteTaskId() {
+        onDelete(task.id)
+    }
+
     return (
         <TaskMainTableListTaskContainer>
             <table>
@@ -16,7 +22,7 @@ export function TaskComponent({ task }: Props) {
                     <td>
                         <button>{isCompleted ? <CheckCircle /> : <div />}</button>
                         <p>{task.title}</p>
-                        <Trash size={22} />
+                        <button onClick={deleteTaskId}><Trash /></button>
                     </td>
                 </tbody>
             </table>

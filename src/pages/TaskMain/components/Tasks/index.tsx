@@ -13,9 +13,10 @@ import { TaskProps } from "../../../../App";
 
 export interface Props {
     tasks: TaskProps[]
+    onDelete: (taskId: string) => void
 }
 
-export function TaskContainer({ tasks }: Props) {
+export function TaskContainer({ tasks, onDelete }: Props) {
     const taskLength = tasks.length
     const completedTasks = tasks.filter((task) => task.isCompleted).length
 
@@ -36,16 +37,22 @@ export function TaskContainer({ tasks }: Props) {
             </TaskMainInfoTaskContainer>
 
             {tasks.map((task) => (
-                <TaskComponent key={task.id} task={task} />
+                <TaskComponent
+                    key={task.id}
+                    task={task}
+                    onDelete={onDelete}
+                />
             ))}
 
-            <TaskMainEmptyTaskContainer>
-                <img src={taskEmptyLogo} alt="" />
-                <p>
-                    <span>Você ainda não tem tarefas cadastradas</span>
-                    <br /> Crie tarefas e organize seus itens a fazer
-                </p>
-            </TaskMainEmptyTaskContainer>
+            {taskLength <= 0 && (
+                <TaskMainEmptyTaskContainer>
+                    <img src={taskEmptyLogo} alt="" />
+                    <p>
+                        <span>Você ainda não tem tarefas cadastradas</span>
+                        <br /> Crie tarefas e organize seus itens a fazer
+                    </p>
+                </TaskMainEmptyTaskContainer>
+            )}
 
         </TaskMainTaskContainer>
     )
