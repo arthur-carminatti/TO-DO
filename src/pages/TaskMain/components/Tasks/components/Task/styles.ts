@@ -8,7 +8,6 @@ export const TaskMainTableListTaskContainer = styled.div`
     padding: 0px;
 
     width: 46rem;
-    height: 25.5rem;
 
     td {
         display: flex;
