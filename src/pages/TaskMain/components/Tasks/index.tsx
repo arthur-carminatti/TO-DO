@@ -3,16 +3,13 @@ import {
     TaskMainInfoCreatedContainer,
     TaskMainInfoDoneContainer,
     TaskMainInfoTaskContainer,
-    TaskMainTableListTaskContainer,
     TaskMainTaskContainer
 } from "./styles";
 
 import taskEmptyLogo from '../../../../assets/ignite-no-itens-list.svg'
-import { CheckCircle, Trash } from 'phosphor-react';
+import { TaskComponent } from "./components/Task/index";
 
 export function TaskContainer() {
-    const isCompleted = true
-    
     return (
         <TaskMainTaskContainer >
             <TaskMainInfoTaskContainer>
@@ -27,6 +24,8 @@ export function TaskContainer() {
                 </TaskMainInfoDoneContainer>
             </TaskMainInfoTaskContainer>
 
+            <TaskComponent />
+
             <TaskMainEmptyTaskContainer>
                 <img src={taskEmptyLogo} alt="" />
                 <p>
@@ -35,27 +34,6 @@ export function TaskContainer() {
                 </p>
             </TaskMainEmptyTaskContainer>
 
-            <TaskMainTableListTaskContainer>
-                <table>
-                    <tbody>
-                        <td>
-                            <button>{isCompleted ? <CheckCircle /> : <div />}</button>
-                            <p>Sua atividade selecionada</p>
-                            <Trash size={22} />
-                        </td>
-                        <td>
-                            <button>{isCompleted ? <CheckCircle /> : <div />}</button>
-                            <p>Sua atividade selecionada</p>
-                            <Trash size={22} />
-                        </td>
-                        <td>
-                            <button>{isCompleted ? <CheckCircle /> : <div />}</button>
-                            <p>Sua atividade selecionada</p>
-                            <Trash size={22} />
-                        </td>
-                    </tbody>
-                </table>
-            </TaskMainTableListTaskContainer>
         </TaskMainTaskContainer>
     )
 }
