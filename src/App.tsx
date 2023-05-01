@@ -31,6 +31,19 @@ export function App() {
     setTasks(newTasks)
   }
 
+  function changeTaskCompleted(taskId: string) {
+    const newTaskCompleted = tasks.map((task) => {
+      if (task.id === taskId) {
+        return {
+          ...task,
+          isCompleted: !task.isCompleted
+        }
+      }
+      return task
+    })
+    setTasks(newTaskCompleted)
+  }
+
   return (
     <ThemeProvider theme={defaultTheme}>
       <Header />
@@ -38,6 +51,7 @@ export function App() {
       <TaskContainer
         tasks={tasks}
         onDelete={deleteTask}
+        onComplete={changeTaskCompleted}
       />
       <GlobalStyle />
     </ThemeProvider>

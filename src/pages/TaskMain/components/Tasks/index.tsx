@@ -14,9 +14,10 @@ import { TaskProps } from "../../../../App";
 export interface Props {
     tasks: TaskProps[]
     onDelete: (taskId: string) => void
+    onComplete: (taskId: string) => void
 }
 
-export function TaskContainer({ tasks, onDelete }: Props) {
+export function TaskContainer({ tasks, onDelete, onComplete }: Props) {
     const taskLength = tasks.length
     const completedTasks = tasks.filter((task) => task.isCompleted).length
 
@@ -41,6 +42,7 @@ export function TaskContainer({ tasks, onDelete }: Props) {
                     key={task.id}
                     task={task}
                     onDelete={onDelete}
+                    onComplete={onComplete}
                 />
             ))}
 

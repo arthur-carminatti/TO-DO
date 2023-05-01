@@ -28,7 +28,9 @@ export function Input({ onAddTask }: Props) {
                 onChange={onChangeTitle}
                 value={title}
             />
-            <button onClick={handleSetTitle}>Criar <PlusCircle size={20} /></button>
+            <button onClick={handleSetTitle}>
+                Criar <PlusCircle size={20} />
+            </button>
         </TaskMainInputContainer>
     )
 }

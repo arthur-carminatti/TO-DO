@@ -41,12 +41,14 @@ export const TaskMainTableListTaskContainer = styled.div`
         }
 
         button {
-            width: 1.5rem;
-            height: 1.5rem;
+            min-width: 1.25rem;
+            height: 1.25rem;
 
             border: none;
             border-radius: 50%;
             background: none;
+
+            box-shadow: 0;
 
             div {
                 width: 100%;
